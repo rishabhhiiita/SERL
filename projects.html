@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Projects | SERL Lab</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8"/>
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="icon" type="image/png" href="content/IIIT.gif">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,300&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+  #head_bg h1{
+    font-family: 'Roboto Slab', serif;
+  }
+</style>
+
+<script>
+var slideIndex = 1;
+//showDivs(slideIndex);
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length-1) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  x[slideIndex-1].style.display = "block";
+}
+setInterval(function(){ showDivs(slideIndex++); }, 5000);
+</script>
+
+<style>
+  body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 0;
+  }
+
+  .container {
+      max-width: 1200px;
+      margin: 50px auto;
+      padding: 50px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 20px;
+  }
+  .container_2 {
+      max-width: 1200px;
+      margin: 50px auto;
+      display: flex;
+      align-items: bottom;
+      flex-direction: row;
+      height: 68px;            
+  }
+
+  .container h2 {
+      margin-top: 0;
+  }
+
+  .container p {
+      margin-bottom: 20px;
+  }
+
+  .container table {
+      width: 100%;
+      border-collapse: collapse;
+  }
+
+  .container table th,
+  .container table td {
+      padding: 10px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+  }
+
+  .container table th {
+      background-color: #f5f5f5;
+  }
+
+  .container a {
+      color: #555;
+      text-decoration: none;
+      border-radius: 4px;
+      padding: 5px 10px;
+  }
+
+  .container a:hover {
+      text-decoration: underline;
+  }
+
+  .container .researcher-details {
+      display: flex;            
+      margin-bottom: 20px;
+  }
+
+  .container .researcher-details img {
+      height: 220px;
+      border-radius: 10%;
+      margin-right: 20px;
+  }
+
+  .container .researcher-details .about {
+      flex: 1;
+  }
+
+  .container .researcher-details h3 {
+      margin: 0;
+  }
+
+  .container .research-paper {
+      margin-bottom: 20px;
+      padding: 20px;
+      background-color: #f9f9f9;
+      border-radius: 8px;
+  }
+
+  .container .research-paper h4 {
+      margin-top: 0;
+      margin-bottom: 10px;
+  }
+
+  .container .research-paper p {
+      margin: 0;
+  }
+
+  .container_2 .actions {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+      margin-left: 20px;
+  }
+
+  .container_2 .actions button {
+      padding: 12px 20px;
+      background-color: #555;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      flex: 1;
+  }
+
+  .container_2 .actions button:hover {
+      background-color: #333;
+  }
+
+  
+
+  .container .logout {
+      text-align: right;
+  }
+
+  .login_text {
+      margin-top: 30px;
+  }
+</style>
+
+</head>
+<body onload="plusDivs(-1)">
+
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">SERL Lab</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="faculty.html">Faculty</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="researchers.php">Researchers</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="publications.php">Publications</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="projects.html">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="resources.html">Resources</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">About Us</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="row" style="padding:20px;margin:20px;">
+    <div class="col-sm-12;">
+            <div class="card" style="padding:40px;width: 1400px;">
+                    <h2>Projects</h2><br>
+                    <div class="contentText" style="text-align: justify;text-justify: inter-word;"> <ol><p> <b> <u> Ph. D. </u></b> </p><ul> <li> Sayantan Nath
+
+                            <b>(Fire Protection in Coal Mine through Image Processing)</b> (Awarded-2017) Co-Supervisor Prof. G. N. Pandey. </li>
+
+                            <li>Divya <b> (Twin Support Vector Machine-Multi Class extension and applications)</b> (submitted)</li>
+
+                            <li> Vimal Updhyay <b>(Development of remotely operable automated device for thickness measurement and monitoring of overhead pipes)</b></li>
+
+                            <li>Bakshi Rohit Prasad <b>(Machine Learning for Big Data Analytics)</b></li>
+
+                             </ul>
+
+
+
+
+
+
+
+                            <br><p> <b> <u>M. Tech.  Final Year</u></b></p><ul>
+
+                            <li><div class="contentText"> Anant Prabhat<b>(Implementing Testing approaches for Complex Event Processing (CFP)) </b></div></li>
+
+                            <li><div class="contentText"> Dibya jyoti Mahuri<b>(Cloud based mutation testing for distributed system)</b></div></li>
+
+                            <li><div class="contentText"> Dhirendra Siddhartha <b>(Root Cause Analysis of Software failure using Log Mining)</b></div></li>
+
+                            </ul>
+
+
+
+
+
+
+
+
+
+
+                            <br>
+
+                            </ul>
+
+
+
+                            <br></p><p> <b> <u>M. Tech.  Students (2016)</u></b></p><ul>
+
+                            <li><div class="contentText"> Neha Garg <b>(Process Mining for Clinical Workflow)</b> </div></li>
+
+                            <li><div class="contentText"> Suchi Maheshwari  <b>(Two-stage software defect prediction using three-way decisions)</b></div></li>
+
+                            <li><div class="contentText"> Ravindra Soni  <b>(Exploring web application testing techniques)</b></div></li>
+
+                            <li><div class="contentText"> Rakesh Kumar Pal <b> (Test Case Minimization using Genetic Algorithm)</b></div></li>
+
+                            <li><div class="contentText"> Unmesh  Kishore Bendale <b> (Distributed feature selection for big data)</b></div></li>
+
+                             </ul>
+
+
+
+                            <br>
+
+                            <p> <b> <u>M. Tech. Students (2015)</u></b></p><ul>
+
+                            <li><div class="contentText"> Shwet Ketu  <b> (A MapReduce Based Advanced Distributed K-means Clustering for Handling Big Data)</b> </div></li>
+
+                            <li><div class="contentText"> Geetanjali Chaurasia  <b>(Clustering based Novel Test Case Prioritization Approach for Regression Testing</b>)</div></li>
+
+                            <li><div class="contentText"> Anushree Priyadarshini  <b> (A MapReduce based Support Vector Machine for Big Data Classification)</b></div></li>
+
+                            <li><div class="contentText"> Anubha Sharma  <b>(A Comparative model of classifier for Authorship Characterization)</b></div></li>
+
+                            <li><div class="contentText"> Harshal Singh  <b> (Link Prediction for Co-Authorship in Heterogeneous Network using Stream Classification</b>)</div></li>
+
+                            <li><div class="contentText"> Preetam Jayaswal  <b>(Churn prediction using Tree ensembles)</b></div></li>
+
+                            </ul>
+
+
+
+
+
+
+
+                            <br><p> <b> <u>M. Tech. Students (2014)</u></b></p><ul>
+
+
+
+                            <li><div class="contentText"> Manoj Kumar <b>(A Clinical Decision Support System for Heart Disease-  A Hybrid Approach Using Fuzzy Method and Neural Network)</b> </div></li>
+
+                            <li><div class="contentText"> Manish Shukla <b>(Hybrid Approach for Tuberculosis Data Classification Using Optimal Centroid Selection Based Clustering)</b></div></li>
+
+                            <li><div class="contentText"> Pradeep Saini<b> (Using Clustering coherent rule generation for healthcare data)</b></div></li>
+
+                            <li><div class="contentText"> Jitendra<b> (Effective detection of Parkinson’s disease using fuzzy k-nearest neighbor approach)</b></div></li>
+
+                            <li><div class="contentText"> Anvita Srivastava<b> (Privacy Preserving Data Mining In Electronic Health Record Using K- Anonymity)</b></div></li>
+
+                            </ul>
+
+                            <br>
+
+                            <p> <b> <u>M. Tech Students (2013)</u></b>
+
+
+
+                             </p><ul><li> <div class="contentText"><b> Shubham Khanna (Study the application of data mining through establishing the pattern of Diabetes disease using SGPGI data)</b></div></li>
+
+                            <li><div class="contentText"> Akhilesh Yadav<b> (Study the application of data mining through establishing the pattern of Lung cancer disease using SGPGI data)</b> </div><!--</li-->
+
+                            </li><li><div class="contentText"> Vijesh Patel <b>(Study the application of data mining through establishing the pattern of Heart Disease using SGPGI data)</b></div></li>
+
+                            <li><div class="contentText"> Neha Rathore <b>(Study the application of data mining by establishing the pattern of Breast Cancer Disease and survivability prediction)</b>.</div></li> </ul>
+
+                            <br>
+
+
+
+                            <p> <b> <u>M. Tech Students (2012)</u></b>
+
+
+
+                            </p><ul>
+
+                            <li><div class="contentText"> Vishal Mandpe  <b>(Mining Software Repositories for Dynamic Fault Prediction)</b></div></li>
+
+                            <li><div class="contentText"> Abhinav Lokhande <b>(Mining Software Repositories for Software Change Classification)</b></div></li>
+
+                            </ul>
+
+
+
+                            <br>
+
+                            <p> <b> <u>M. Tech Students (2011)</u></b>
+
+                            </p><ul>
+
+                            <li><div class="contentText"> Divya <b>(Support Vector Classification and Regression for Health Data Mining</b>)</div></li>
+
+                            <li><div class="contentText"> Ruchi Arya<b> (A fuzzy Clustering approach using multi kernel approach)</b></div></li>
+
+                            <li><div class="contentText"> Santosh Kumar<b> (SVM Based Data Classification using Multi Kernel approach)</b></div></li>
+
+                            </ul>
+
+
+
+                            <br>
+
+                            <p> <b> <u>M. Tech Students (2010)</u></b>
+
+                            </p><ul>
+
+                            <li><div class="contentText"> Sadhna Tiwari <b> (Classification of Datasets using SVM)</b></div></li>
+
+
+
+                            </ul></ol>
+
+
+
+                            </div>
+                    </div>
+            </div>
+</div>
+
+<footer>
+&#169; 2023 SERL - Software Engineering Research Lab <br> Indian Institute of Information Technology Allahabad
+| Designed by Group
+</footer>
+
+</div>
+
+<script src="js/main.js"></script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SERL Lab</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8"/>
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="icon" type="image/png" href="content/IIIT.gif">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,300&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+  #head_bg h1{
+    font-family: 'Roboto Slab', serif;
+  }
+</style> 
+
+<script>
+var slideIndex = 1;
+//showDivs(slideIndex);
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length-1) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  x[slideIndex-1].style.display = "block";
+}
+setInterval(function(){ showDivs(slideIndex++); }, 5000);
+</script>
+
+<style>
+  body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 0;
+  }
+
+  .container {
+      max-width: 1200px;
+      margin: 50px auto;
+      padding: 50px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 20px;
+  }
+  .container_2 {
+      max-width: 1200px;
+      margin: 50px auto;
+      display: flex;
+      align-items: bottom;
+      flex-direction: row;
+      height: 68px;            
+  }
+
+  .container h2 {
+      margin-top: 0;
+  }
+
+  .container p {
+      margin-bottom: 20px;
+  }
+
+  .container table {
+      width: 100%;
+      border-collapse: collapse;
+  }
+
+  .container table th,
+  .container table td {
+      padding: 10px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+  }
+
+  .container table th {
+      background-color: #f5f5f5;
+  }
+
+  .container a {
+      color: #555;
+      text-decoration: none;
+      border-radius: 4px;
+      padding: 5px 10px;
+  }
+
+  .container a:hover {
+      text-decoration: underline;
+  }
+
+  .container .researcher-details {
+      display: flex;            
+      margin-bottom: 20px;
+  }
+
+  .container .researcher-details img {
+      height: 220px;
+      border-radius: 10%;
+      margin-right: 20px;
+  }
+
+  .container .researcher-details .about {
+      flex: 1;
+  }
+
+  .container .researcher-details h3 {
+      margin: 0;
+  }
+
+  .container .research-paper {
+      margin-bottom: 20px;
+      padding: 20px;
+      background-color: #f9f9f9;
+      border-radius: 8px;
+  }
+
+  .container .research-paper h4 {
+      margin-top: 0;
+      margin-bottom: 10px;
+  }
+
+  .container .research-paper p {
+      margin: 0;
+  }
+
+  .container_2 .actions {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+      margin-left: 20px;
+  }
+
+  .container_2 .actions button {
+      padding: 12px 20px;
+      background-color: #555;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      flex: 1;
+  }
+
+  .container_2 .actions button:hover {
+      background-color: #333;
+  }
+
+  
+
+  .container .logout {
+      text-align: right;
+  }
+
+  .login_text {
+      margin-top: 30px;
+  }
+</style>
+
+</head>
+<body onload="plusDivs(-1)">
+
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">SERL Lab</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="faculty.html">Faculty</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="researchers.php">Researchers</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="publications.php">Publications</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="projects.html">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="resources.html">Resources</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">About Us</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="row" style="padding:20px;">
+    <div class="col-sm-8">
+            <div class="container-fluid">
+                    <div class="card" style="padding:40px;">
+<div class="w3-content w3-display-container" style="width:100%;height:500px">
+    <img class="mySlides" src="./content/pic0.jpg" style="width:100%;height:500px;object-fit: cover;">
+    <img class="mySlides" src="./content/pic1.jpg" style="width:100%;height:500px;object-fit: cover;">
+    <img class="mySlides" src="./content/pic2.jpg" style="width:100%;height:500px;object-fit: cover;">
+    <img class="mySlides" src="./content/pic3.jpg" style="width:100%;height:500px;object-fit: cover;">
+    <img class="mySlides" src="./content/pic4.jpg" style="width:100%;height:500px;object-fit: cover;">
+
+    <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+    <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+</div>
+
+                    <h2><br>About - SERL</h2>
+                    <p style="    text-align: justify;
+                    text-justify: inter-word;">IIIT Allahabad is establishing the Software Engineering Research Lab (SERL) with the aim to conduct cutting-edge research in designing complex and large-scale software-intensive systems that can offer scalable solutions aligned with business needs. The lab will cover interdisciplinary research domains and focus on addressing the practical software engineering challenges faced by industries.With recent developments in data-driven industries, cyber-physical systems, smart city applications, and business intelligence solutions, there is a significant demand for software development industries to provide solutions to these challenges. To ensure that these solutions are thoroughly evaluated and meet industrial standards, collaboration with industry experts is essential. The establishment of SERL@IIITA will provide a robust platform for researchers and students to showcase their potential globally.The main objective of SERL@IIITA is to offer solutions to complex software engineering problems faced by industries. By conducting research in software design and development, SERL@IIITA will contribute to the growth of software development industries, and enable them to provide scalable and robust solutions aligned with business needs. The lab will focus on real industrial challenges and offer interdisciplinary research opportunities to students and researchers.Overall, the establishment of SERL@IIITA will provide a strong platform for researchers and students to work on cutting-edge software engineering problems and offer solutions that can be applied in real-world industrial scenarios</p>
+        </div></div>
+    </div>
+    <div class="col-sm-4">
+
+            <div class="card" style="padding:40px;">
+              
+                    <h2>News
+                      
+                    </h2>
+                    <!-- <a id="plus"> </a> -->
+                        <hr>
+                    <marquee scrollamount="2" onmouseover="this.stop();" onmouseout="this.start();" direction = "up" style="height:150px;">
+                        <ul id="News">
+                            <li>The <b style="color:rgb(12, 0, 82)">SERL website</b> is up and running !!</li><br>
+                            <li>NEW HOD IS ASSIGNED</li><br>
+                            <li>MR.BAGESH IS NEW MENTOR </li><br>
+                            <li>SERL IS UNDER MAINTAINCE FROM 12:00 HRS TO 13:00 HRS</li><br>
+                            <li>SERL NEW VERSION 1.1.2 IS UPDATED</li><br>
+                        </ul>
+                    </marquee>
+                    <hr>
+                    
+                    <!-- <div id="newsInput">
+                      <input type="hidden" />
+                      <input type="text" name="news" id="news"> <button style="margin-left: 20px; padding: 2px;" onclick="addNews()" type="submit">Add</button>
+                    </div> -->
+                    
+            </div>
+
+            <div class="card" style="padding:40px;margin-top:20px;">
+                <h2>Vision and Mission</h2>
+                    <hr>
+                    <p style="    text-align: justify;
+                    text-justify: inter-word;">
+                        <i><b>"Big thinking precedes great achievement."</b></i><br><br>
+                        The mission of this initiative is to establish a world-class research lab focused on industrial applications. The lab will engage in various scholarly activities such as developing software tools, special interest groups, conferences, workshops, forums for open-source solutions, and hands-on training. Through these initiatives, the lab aims to provide reliable and repeatable results reflecting its core strategy and vision of deepening excellence. The lab will become a go-to resource for industries seeking innovative solutions to their software engineering challenges, contributing to the growth of the software industry nationally and globally.</b>
+                    </p>
+                <hr>
+        </div>
+
+    </div>
+</div>
+
+<footer>
+&#169; 2023 SERL - Software Engineering Research Lab <br> Indian Institute of Information Technology Allahabad
+| Designed by Group
+</footer>
+
+</div>
+
+<script src="js/main.js"></script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
